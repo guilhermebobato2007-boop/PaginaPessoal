@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Portfólio pessoal de Guilherme Bobato, estudante de tecnologia e técnico em Instrumentação Industrial." />
+  <title>Guilherme Bobato | Portfólio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .hero-section {
+      min-height: calc(100vh - 76px);
+      background: radial-gradient(circle at 85% 20%, rgba(13, 110, 253, .18), transparent 28%),
+        radial-gradient(circle at 10% 90%, rgba(111, 66, 193, .12), transparent 24%), #f8f9fa;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 7vw, 5.4rem);
+      line-height: .98;
+      letter-spacing: -.045em;
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #0d6efd, #6610f2);
+    }
+
+    .profile-circle {
+      width: 120px;
+      height: 120px;
+      display: grid;
+      place-items: center;
+      border: 4px solid rgba(255, 255, 255, .3);
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, .08);
+    }
+
+    .section-label {
+      letter-spacing: .12em;
+      font-size: .75rem;
+    }
+
+    .skill-icon,
+    .project-icon,
+    .contact-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+    }
+
+    .skill-card,
+    .project-card,
+    .contact-card {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .skill-card:hover,
+    .project-card:hover,
+    .contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 1rem 2.5rem rgba(33, 37, 41, .12) !important;
+    }
+
+    .contact-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .project-card .project-number {
+      font-size: 4.5rem;
+      line-height: 1;
+      opacity: .08;
+      right: 18px;
+      top: 12px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: none;
+    }
+
+    .contact-card strong {
+      overflow-wrap: anywhere;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal,
+      .skill-card,
+      .project-card,
+      .contact-card {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-light text-dark">
+  <header class="bg-white border-bottom sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg bg-white py-3" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#inicio">
+          <span class="bg-primary text-white rounded-3 px-2 py-1">GB</span><span>Guilherme</span>
+        </a>
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mt-3 mt-lg-0" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 text-center">
+            <li class="nav-item"><a class="nav-link px-3" href="#inicio">Início</a></li>
+            <li class="nav-item"><a class="nav-link px-3" href="#sobre">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link px-3" href="#formacao">Formação</a></li>
+            <li class="nav-item"><a class="nav-link px-3" href="#competencias">Competências</a></li>
+            <li class="nav-item"><a class="nav-link px-3" href="#projetos">Projetos</a></li>
+            <li class="nav-item mt-2 mt-lg-0 ms-lg-2"><a class="btn btn-primary rounded-pill px-4"
+                href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section d-flex align-items-center py-5" id="inicio">
+      <div class="container py-lg-5">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-7 text-center text-lg-start reveal">
+            <span class="badge rounded-pill text-bg-primary px-3 py-2 mb-3"><i
+                class="bi bi-code-slash me-2"></i>Estudante de Tecnologia</span>
+            <h1 class="hero-title fw-bold mb-4">Tecnologia, automação e <span
+                class="text-primary">desenvolvimento.</span></h1>
+            <p class="lead text-secondary mb-4 mx-auto mx-lg-0" style="max-width: 680px">
+              Olá! Eu sou <strong class="text-dark">Guilherme Bobato</strong>. Tenho formação técnica em Instrumentação
+              Industrial e atualmente amplio meus conhecimentos em automação, dados, computação em nuvem e
+              desenvolvimento de sistemas.
+            </p>
+            <div class="d-grid d-sm-flex justify-content-center justify-content-lg-start gap-3">
+              <a class="btn btn-primary btn-lg rounded-pill px-4" href="#projetos"><i class="bi bi-grid me-2"></i>Ver
+                projetos</a>
+              <a class="btn btn-outline-dark btn-lg rounded-pill px-4" href="#sobre"><i
+                  class="bi bi-person me-2"></i>Sobre mim</a>
+            </div>
+            <div class="row g-3 mt-4 text-start">
+              <div class="col-6 col-sm-4">
+                <div class="bg-white border rounded-4 p-3 h-100 shadow-sm">
+                  <p class="h4 fw-bold text-primary mb-0">5+</p><small class="text-secondary">Áreas em estudo</small>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4">
+                <div class="bg-white border rounded-4 p-3 h-100 shadow-sm">
+                  <p class="h4 fw-bold text-primary mb-0">Técnico</p><small
+                    class="text-secondary">Instrumentação</small>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="bg-white border rounded-4 p-3 h-100 shadow-sm">
+                  <p class="h4 fw-bold text-primary mb-0">Prática</p><small class="text-secondary">Projetos
+                    reais</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 reveal">
+            <div class="hero-card text-white rounded-5 shadow-lg p-4 p-md-5 position-relative overflow-hidden">
+              <div class="position-absolute top-0 end-0 p-4 opacity-25"><i class="bi bi-cpu display-1"></i></div>
+              <div class="profile-circle rounded-circle bg-white text-primary mx-auto mx-lg-0 mb-4"><span
+                  class="display-5 fw-bold">GB</span></div>
+              <span class="small text-white-50 text-uppercase fw-semibold">Perfil</span>
+              <h2 class="display-6 fw-bold mt-2 mb-2">Guilherme Bobato</h2>
+              <p class="fs-5 text-white-50 mb-4">Estudante • Tecnologia • Automação</p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge rounded-pill bg-white text-primary px-3 py-2">Back-end</span>
+                <span
+                  class="badge rounded-pill bg-white bg-opacity-10 border border-white border-opacity-25 px-3 py-2">Dados</span>
+                <span
+                  class="badge rounded-pill bg-white bg-opacity-10 border border-white border-opacity-25 px-3 py-2">Nuvem</span>
+                <span
+                  class="badge rounded-pill bg-white bg-opacity-10 border border-white border-opacity-25 px-3 py-2">Automação</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-5" id="sobre">
+      <div class="container py-lg-5">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-5 reveal">
+            <p class="section-label text-primary text-uppercase fw-bold mb-2">Sobre mim</p>
+            <h2 class="display-5 fw-bold mb-4">Construindo conhecimento entre indústria e software.</h2>
+          </div>
+          <div class="col-12 col-lg-7 reveal">
+            <p class="lead text-secondary">Minha base começou na <strong class="text-dark">Instrumentação
+                Industrial</strong>, onde tive contato com sensores, medições e controle de processos. Hoje, estou
+              expandindo essa experiência para a área de tecnologia.</p>
+            <p class="text-secondary mb-4">Busco aprender por meio de projetos práticos, conectando o mundo industrial
+              ao desenvolvimento de sistemas, análise de dados e soluções digitais modernas.</p>
+            <div class="row g-3">
+              <div class="col-12 col-sm-6">
+                <div class="d-flex gap-3 align-items-start p-3 border rounded-4 h-100"><i
+                    class="bi bi-lightning-charge-fill text-primary fs-3"></i>
+                  <div>
+                    <h3 class="h6 fw-bold mb-1">Perfil prático</h3>
+                    <p class="small text-secondary mb-0">Aprendo desenvolvendo soluções e testando ideias.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="d-flex gap-3 align-items-start p-3 border rounded-4 h-100"><i
+                    class="bi bi-arrow-up-right-circle-fill text-primary fs-3"></i>
+                  <div>
+                    <h3 class="h6 fw-bold mb-1">Evolução constante</h3>
+                    <p class="small text-secondary mb-0">Sempre buscando novas tecnologias e experiências.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark text-white py-5" id="formacao">
+      <div class="container py-lg-5">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-4 reveal">
+            <p class="section-label text-info text-uppercase fw-bold mb-2">Formação</p>
+            <h2 class="display-5 fw-bold mb-3">Instrumentação Industrial</h2>
+            <p class="text-white-50 mb-0">Uma base técnica que conecta processos industriais, automação e tecnologia.
+            </p>
+          </div>
+          <div class="col-12 col-lg-8 reveal">
+            <div class="card border-0 rounded-5 p-4 p-md-5 shadow-lg">
+              <div class="d-flex flex-column flex-md-row gap-4">
+                <div class="skill-icon rounded-4 bg-primary-subtle text-primary flex-shrink-0"><i
+                    class="bi bi-gear-wide-connected fs-3"></i></div>
+                <div>
+                  <span class="badge text-bg-primary rounded-pill mb-3">Formação técnica concluída</span>
+                  <h3 class="h2 fw-bold mb-3">Técnico em Instrumentação Industrial</h3>
+                  <p class="text-secondary mb-4">Formação voltada para medição, sensores, instrumentação, controle de
+                    processos e equipamentos industriais. Essa experiência criou a base para meu interesse atual por
+                    automação e desenvolvimento de soluções tecnológicas.</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="badge text-bg-light border text-dark px-3 py-2">Sensores</span>
+                    <span class="badge text-bg-light border text-dark px-3 py-2">Controle</span>
+                    <span class="badge text-bg-light border text-dark px-3 py-2">Medição</span>
+                    <span class="badge text-bg-light border text-dark px-3 py-2">Processos Industriais</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-5" id="competencias">
+      <div class="container py-lg-5">
+        <div class="row justify-content-between align-items-end mb-5 reveal">
+          <div class="col-12 col-lg-7">
+            <p class="section-label text-primary text-uppercase fw-bold mb-2">Competências</p>
+            <h2 class="display-5 fw-bold mb-3">O que estou estudando neste semestre</h2>
+            <p class="lead text-secondary mb-0">Áreas que estou desenvolvendo para ampliar minha formação em tecnologia.
+            </p>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+          <div class="col reveal">
+            <article class="skill-card card h-100 border-0 shadow-sm rounded-5 p-4">
+              <div class="skill-icon rounded-4 bg-primary-subtle text-primary mb-4"><i class="bi bi-cpu fs-3"></i></div>
+              <h3 class="h4 fw-bold">Automação Industrial</h3>
+              <p class="text-secondary mb-0">Controle de processos, sensores, atuadores e integração de sistemas
+                automatizados.</p>
+            </article>
+          </div>
+          <div class="col reveal">
+            <article class="skill-card card h-100 border-0 shadow-sm rounded-5 p-4">
+              <div class="skill-icon rounded-4 bg-primary-subtle text-primary mb-4"><i
+                  class="bi bi-bar-chart-line fs-3"></i></div>
+              <h3 class="h4 fw-bold">Ciência de Dados</h3>
+              <p class="text-secondary mb-0">Coleta, organização, análise e interpretação de dados para gerar
+                informações úteis.</p>
+            </article>
+          </div>
+          <div class="col reveal">
+            <article class="skill-card card h-100 border-0 shadow-sm rounded-5 p-4">
+              <div class="skill-icon rounded-4 bg-primary-subtle text-primary mb-4"><i
+                  class="bi bi-cloud-check fs-3"></i></div>
+              <h3 class="h4 fw-bold">Computação em Nuvem</h3>
+              <p class="text-secondary mb-0">Serviços, aplicações, armazenamento e infraestrutura disponibilizados pela
+                internet.</p>
+            </article>
+          </div>
+          <div class="col reveal">
+            <article class="skill-card card h-100 border-0 shadow-sm rounded-5 p-4">
+              <div class="skill-icon rounded-4 bg-primary-subtle text-primary mb-4"><i class="bi bi-hdd-stack fs-3"></i>
+              </div>
+              <h3 class="h4 fw-bold">Desenvolvimento Back-end</h3>
+              <p class="text-secondary mb-0">Lógica de aplicações, APIs, servidores, autenticação e integração com
+                bancos de dados.</p>
+            </article>
+          </div>
+          <div class="col reveal">
+            <article class="skill-card card h-100 border-0 shadow-sm rounded-5 p-4">
+              <div class="skill-icon rounded-4 bg-primary-subtle text-primary mb-4"><i
+                  class="bi bi-window-stack fs-3"></i></div>
+              <h3 class="h4 fw-bold">Frameworks Front-end</h3>
+              <p class="text-secondary mb-0">Ferramentas para criar interfaces modernas, organizadas, responsivas e
+                interativas.</p>
+            </article>
+          </div>
+          <div class="col reveal">
+            <article class="skill-card card h-100 border-0 shadow-sm rounded-5 p-4 bg-primary text-white">
+              <div class="skill-icon rounded-4 bg-white bg-opacity-25 text-white mb-4"><i
+                  class="bi bi-plus-lg fs-3"></i></div>
+              <h3 class="h4 fw-bold">Próximos conhecimentos</h3>
+              <p class="text-white-50 mb-0">Continuar evoluindo com novos projetos, tecnologias e experiências práticas.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-5" id="projetos">
+      <div class="container py-lg-5">
+        <div class="row justify-content-between align-items-end mb-5 reveal">
+          <div class="col-12 col-lg-7">
+            <p class="section-label text-primary text-uppercase fw-bold mb-2">Portfólio • GitHub</p>
+            <h2 class="display-5 fw-bold mb-3">Projetos em destaque</h2>
+            <p class="lead text-secondary mb-0">Projetos selecionados entre meus repositórios públicos no GitHub.</p>
+          </div>
+          <div class="col-12 col-lg-auto mt-3 mt-lg-0"><a class="btn btn-outline-dark rounded-pill px-4"
+              href="https://github.com/guilhermebobato2007-boop?tab=repositories" target="_blank"
+              rel="noopener noreferrer"><i class="bi bi-github me-2"></i>Ver todos os repositórios</a></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-lg-4 reveal">
+            <article class="project-card card h-100 border-0 shadow-sm rounded-5 p-4 position-relative overflow-hidden">
+              <span class="project-number position-absolute fw-bold">01</span>
+              <div class="project-icon rounded-4 bg-primary-subtle text-primary mb-4"><i class="bi bi-cake2 fs-3"></i>
+              </div>
+              <span class="small text-primary fw-semibold text-uppercase">Web • Projeto real</span>
+              <h3 class="h3 fw-bold mt-2">Lá M.A.G Doces</h3>
+              <p class="text-secondary">Site de confeitaria desenvolvido com interface responsiva, identidade visual
+                própria e interações em JavaScript.</p>
+              <div class="d-flex flex-wrap gap-2 mb-4"><span
+                  class="badge text-bg-light border text-dark">HTML</span><span
+                  class="badge text-bg-light border text-dark">CSS</span><span
+                  class="badge text-bg-light border text-dark">JavaScript</span></div>
+              <div class="d-flex flex-wrap gap-2 mt-auto">
+                <a class="btn btn-primary rounded-pill" href="https://xn--lmag-5na.com/" target="_blank"
+                  rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right me-2"></i>Visitar site</a>
+                <a class="btn btn-outline-dark rounded-pill"
+                  href="https://github.com/guilhermebobato2007-boop/la-mag-doces" target="_blank"
+                  rel="noopener noreferrer"><i class="bi bi-github me-2"></i>Ver repositório</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-lg-4 reveal">
+            <article class="project-card card h-100 border-0 shadow-sm rounded-5 p-4 position-relative overflow-hidden">
+              <span class="project-number position-absolute fw-bold">02</span>
+              <div class="project-icon rounded-4 bg-primary-subtle text-primary mb-4"><i class="bi bi-trophy fs-3"></i>
+              </div>
+              <span class="small text-primary fw-semibold text-uppercase">JavaScript • Front-end</span>
+              <h3 class="h3 fw-bold mt-2">Copa 2026</h3>
+              <p class="text-secondary">Projeto temático da Copa de 2026 criado para praticar desenvolvimento front-end
+                e recursos com JavaScript.</p>
+              <div class="d-flex flex-wrap gap-2 mb-4"><span
+                  class="badge text-bg-light border text-dark">JavaScript</span><span
+                  class="badge text-bg-light border text-dark">Front-end</span><span
+                  class="badge text-bg-light border text-dark">Interface</span></div>
+              <a class="btn btn-primary rounded-pill mt-auto align-self-start"
+                href="https://github.com/guilhermebobato2007-boop/Copa-2026" target="_blank"
+                rel="noopener noreferrer"><i class="bi bi-github me-2"></i>Ver repositório</a>
+            </article>
+          </div>
+          <div class="col-12 col-lg-4 reveal">
+            <article class="project-card card h-100 border-0 shadow-sm rounded-5 p-4 position-relative overflow-hidden">
+              <span class="project-number position-absolute fw-bold">03</span>
+              <div class="project-icon rounded-4 bg-primary-subtle text-primary mb-4"><i
+                  class="bi bi-car-front fs-3"></i></div>
+              <span class="small text-primary fw-semibold text-uppercase">JavaScript • Aplicação</span>
+              <h3 class="h3 fw-bold mt-2">Gestor de Frota</h3>
+              <p class="text-secondary">Aplicação front-end para cadastrar marca, modelo e ano de veículos, visualizar
+                informações e adicionar carros ao pátio.</p>
+              <div class="d-flex flex-wrap gap-2 mb-4"><span
+                  class="badge text-bg-light border text-dark">HTML</span><span
+                  class="badge text-bg-light border text-dark">CSS</span><span
+                  class="badge text-bg-light border text-dark">JavaScript</span></div>
+              <a class="btn btn-primary rounded-pill mt-auto align-self-start"
+                href="https://github.com/guilhermebobato2007-boop/Gestor-de-Frota" target="_blank"
+                rel="noopener noreferrer"><i class="bi bi-github me-2"></i>Ver repositório</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-5" id="contato">
+      <div class="container py-lg-5">
+        <div class="bg-primary text-white rounded-5 p-4 p-md-5 shadow-lg reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-12 col-lg-7 text-center text-lg-start">
+              <p class="section-label text-white-50 text-uppercase fw-bold mb-2">Contato</p>
+              <h2 class="display-5 fw-bold mb-3">Vamos conversar?</h2>
+              <p class="lead text-white-50 mb-0">Estou sempre aberto a trocar ideias, aprender e participar de novos
+                projetos na área de tecnologia.</p>
+            </div>
+            <div class="col-12 col-lg-5">
+              <div class="row g-3">
+                <div class="col-12"><a class="contact-link" href="mailto:Guilhermebobato2007@gmail.com"
+                    aria-label="Enviar e-mail para Guilherme Bobato">
+                    <div class="contact-card bg-white text-dark rounded-4 p-3 d-flex align-items-center gap-3">
+                      <div class="contact-icon rounded-3 bg-primary-subtle text-primary flex-shrink-0"><i
+                          class="bi bi-envelope fs-4"></i></div>
+                      <div class="min-w-0"><small
+                          class="text-secondary d-block">E-mail</small><strong>Guilhermebobato2007@gmail.com</strong>
+                      </div><i class="bi bi-envelope-arrow-up ms-auto text-primary"></i>
+                    </div>
+                  </a></div>
+                <div class="col-12 col-sm-6 col-lg-12"><a class="contact-link"
+                    href="https://www.linkedin.com/in/guilhermebobato-ads" target="_blank" rel="noopener noreferrer"
+                    aria-label="Abrir LinkedIn de Guilherme Bobato">
+                    <div
+                      class="contact-card bg-white bg-opacity-10 border border-white border-opacity-25 rounded-4 p-3 d-flex align-items-center gap-3">
+                      <div class="contact-icon rounded-3 bg-white bg-opacity-10 flex-shrink-0"><i
+                          class="bi bi-linkedin fs-4"></i></div>
+                      <div class="min-w-0"><small
+                          class="text-white-50 d-block">LinkedIn</small><strong>linkedin.com/in/guilhermebobato-ads</strong>
+                      </div><i class="bi bi-box-arrow-up-right ms-auto"></i>
+                    </div>
+                  </a></div>
+                <div class="col-12 col-sm-6 col-lg-12"><a class="contact-link"
+                    href="https://github.com/guilhermebobato2007-boop" target="_blank" rel="noopener noreferrer"
+                    aria-label="Abrir perfil de Guilherme Bobato no GitHub">
+                    <div
+                      class="contact-card bg-white bg-opacity-10 border border-white border-opacity-25 rounded-4 p-3 d-flex align-items-center gap-3">
+                      <div class="contact-icon rounded-3 bg-white bg-opacity-10 flex-shrink-0"><i
+                          class="bi bi-github fs-4"></i></div>
+                      <div class="min-w-0"><small
+                          class="text-white-50 d-block">GitHub</small><strong>@guilhermebobato2007-boop</strong></div><i
+                        class="bi bi-box-arrow-up-right ms-auto"></i>
+                    </div>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-4">
+    <div
+      class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-center text-md-start">
+      <div>
+        <p class="fw-bold mb-0">Guilherme Bobato</p><small class="text-white-50">Tecnologia • Automação •
+          Desenvolvimento</small>
+      </div>
+      <a href="#inicio" class="btn btn-outline-light btn-sm rounded-pill px-3">Voltar ao topo <i
+          class="bi bi-arrow-up ms-1"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('#menuPrincipal .nav-link, #menuPrincipal .btn').forEach((link) => {
+      link.addEventListener('click', () => {
+        const menu = document.getElementById('menuPrincipal');
+        const instance = bootstrap.Collapse.getInstance(menu);
+        if (instance) instance.hide();
+      });
+    });
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+    } else {
+      document.querySelectorAll('.reveal').forEach((element) => element.classList.add('show'));
+    }
+  </script>
+</body>
+
+</html>
